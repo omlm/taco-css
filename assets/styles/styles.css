@@ -1,0 +1,191 @@
+:root {
+  --red: red;
+  --green: green;
+  --dark: #242424;
+  --light: #eeeeee;
+  --accent: hsl(216 75% 45%);
+}
+
+:root {
+  --small: 1rem;
+  --medium: 2rem;
+  --large: 4rem;
+  --huge: 10rem;
+}
+
+:root {
+  --font-base-size: 1rem;
+  --font-scale-ratio: 1.25;
+  --font-line-height: 1.75;
+  --font-line-height-heading: 1.2;
+  --font-family-heading: "Suisse", Sans-serif;
+  --font-family-body: "Suisse", Sans-serif;
+  --font-family-alt: "Suisse", Sans-serif;
+  --font-family-code: Monaco, Sans-serif;
+  --font-weight-light: 300;
+  --font-weight-standard: 400;
+  --font-weight-strong: 600;
+  --text-size-body-large: calc(var(--font-base-size)*var(--font-scale-ratio));
+  --text-size-body-standard: var(--font-base-size);
+  --text-size-body-small: calc(var(--font-base-size)*0.875);
+  --text-size-body-micro: calc(var(--font-base-size)*0.75);
+  --text-size-heading-1: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-2: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-3: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-4: calc(var(--font-base-size)*var(--font-scale-ratio));
+  --text-size-heading-5: calc(var(--font-base-size));
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  Experimental use of Josh' custom reset. Read more here:  
+  https://www.joshwcomeau.com/css/custom-css-reset/ 
+
+  */
+.card {
+  color: var(--light);
+  padding: var(--small);
+  margin-top: var(--large);
+}
+
+.accordion {
+  color: var(--green);
+  padding: var(--small);
+}
+
+:root {
+  --unchecked: var(--dark);
+  --checked: var(--accent);
+  --checkmark: var(--light);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  padding: 0;
+  gap: 0.33rem;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  line-height: 1.4;
+  padding-left: 32px;
+  padding-top: 6px;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--unchecked);
+  border-radius: 3px;
+}
+input[type=checkbox]:checked + label::before {
+  content: "";
+  background-color: var(--checked);
+  border-color: var(--checked);
+}
+input[type=checkbox]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 12px;
+  border-bottom: 3px solid var(--checkmark);
+  border-right: 3px solid var(--checkmark);
+  transform: rotate(45deg);
+}
+
+:root {
+  --unchecked: var(--dark);
+  --checked: var(--accent);
+  --checkmark: var(--light);
+}
+
+input[type=radio] {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+input[type=radio] + label {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  line-height: 1.4;
+  padding-left: 32px;
+  padding-top: 6px;
+}
+input[type=radio] + label:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--unchecked);
+  border-radius: 24px;
+}
+input[type=radio]:checked + label::before {
+  content: "";
+  border-color: var(--checked);
+}
+input[type=radio]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 8px;
+  background-color: var(--checked);
+}/*# sourceMappingURL=styles.css.map */

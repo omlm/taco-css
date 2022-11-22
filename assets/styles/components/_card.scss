@@ -1,0 +1,9 @@
+@use '../tokens';
+@use '../base';
+
+.card {
+  color: var(--light);
+  padding: var(--small);
+  margin-top: var(--large);
+
+}  

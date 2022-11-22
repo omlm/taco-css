@@ -1,0 +1,28 @@
+:root {
+
+  --font-base-size: 1rem;
+  --font-scale-ratio: 1.25;
+
+  --font-line-height: 1.75;
+  --font-line-height-heading: 1.2;
+
+  --font-family-heading: "Suisse", Sans-serif;
+  --font-family-body: "Suisse", Sans-serif;
+  --font-family-alt: "Suisse", Sans-serif;
+  --font-family-code: Monaco, Sans-serif;
+  --font-weight-light: 300;
+  --font-weight-standard: 400;
+  --font-weight-strong: 600;
+  
+  --text-size-body-large: calc(var(--font-base-size)*var(--font-scale-ratio));
+  --text-size-body-standard: var(--font-base-size);
+  --text-size-body-small: calc(var(--font-base-size)*0.875);
+  --text-size-body-micro: calc(var(--font-base-size)*0.75);
+  
+  --text-size-heading-1: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-2: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-3: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio));
+  --text-size-heading-4: calc(var(--font-base-size)*var(--font-scale-ratio));
+  --text-size-heading-5: calc(var(--font-base-size));
+
+} 

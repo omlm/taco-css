@@ -1,0 +1,66 @@
+@use '../tokens';
+@use '../base';
+
+
+:root { 
+  --unchecked: var(--dark);
+  --checked: var(--accent);
+  --checkmark: var(--light);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  padding: 0;
+  gap: 0.33rem;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  + label {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    line-height: 1.4;
+    padding-left: 32px;
+    padding-top: 6px;
+
+   &:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--unchecked);
+    border-radius: 3px;
+   }   
+  }
+
+  &:checked + label::before {
+    content: "";
+    background-color: var(--checked);
+    border-color: var(--checked);
+  }
+    &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 12px;
+    border-bottom: 3px solid var(--checkmark);
+    border-right: 3px solid var(--checkmark);
+    transform: rotate(45deg);
+  }
+
+}

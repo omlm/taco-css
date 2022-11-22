@@ -1,0 +1,7 @@
+@use '../tokens';
+@use '../base';
+
+.accordion {
+  color:  var(--green);
+  padding: var(--small);
+}  

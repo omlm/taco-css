@@ -1,0 +1,2 @@
+:root{--red: red;--green: green;--dark: #242424;--light: #eeeeee}:root{--small: 1rem;--medium: 2rem;--large: 4rem;--huge: 10rem}.card{color:var(--light);padding:var(--small);margin-top:var(--large)}.accordion{color:var(--green);padding:var(--small)}
+/*# sourceMappingURL=styles.min.css.map */
