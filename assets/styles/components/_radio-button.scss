@@ -8,7 +8,7 @@
   --checkmark: var(--light);
 }
 
-input[type='radio'] {
+.radio {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;

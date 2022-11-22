@@ -11,16 +11,28 @@
   <body>
     <h1>Hello World!</h1>
     <fieldset>
-      <input type="checkbox" name="check-1" id="check-1" />
-      <label for="check-1">Checkbox 1</label>
-      <input type="checkbox" name="check-2" id="check-2" />
-      <label for="check-2">Checkbox 2</label>
+      <div class="form-item">
+        <input class="checkbox" type="checkbox" name="check-1" id="check-1" />
+        <label for="check-1">Checkbox 1</label>
+      </div>
+      <div class="form-item">
+        <input class="checkbox" type="checkbox" name="check-2" id="check-2" />
+        <label for="check-2">Checkbox 2</label>
+      </div>
     </fieldset>
     <fieldset>
-      <input type="radio" name="radio" id="radio-1" />
-      <label for="radio-1">Yes</label>
-      <input type="radio" name="radio" id="radio-2" />
-      <label for="radio-2">No</label>
+      <div class="form-item">
+        <input class="radio" type="radio" name="radio" id="radio-1" />
+        <label for="radio-1">Yes</label>
+      </div>
+      <div class="form-item">
+        <input class="radio" type="radio" name="radio" id="radio-2" />
+        <label for="radio-2">No</label>
+      </div>
     </fieldset>
+    <div class="form item">
+      <input class="toggle-switch" type="checkbox" name="toggle" id="toggle" />
+      <label for="toggle">Toggle</label>
+    </div>
   </body>
 </html>
