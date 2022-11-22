@@ -1,0 +1,48 @@
+@use '../tokens';
+@use '../base';
+
+.toggle-switch {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  + label {
+    position: relative;
+    display: inline-block;
+    padding-right: 64px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 42px;
+      height: 100%;
+      background-color: var(--dark);
+      border-radius: 100px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: calc(42px - 20px - 2px);
+      width: 20px;
+      height: 20px;
+      background-color: var(--light);
+      border-radius: 48px;
+    }
+  }
+  &:checked + label {
+    &:before {
+      background-color: var(--accent);
+    }
+    &:after {
+      right: 2px;
+    }
+  }
+}
