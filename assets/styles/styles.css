@@ -4,6 +4,16 @@
   --dark: #242424;
   --light: #eeeeee;
   --accent: hsl(216 75% 45%);
+  --neutral-100: hsl(0 0% 0%);
+  --neutral-200: hsl(0 0% 8%);
+  --neutral-300: hsl(0 0% 16%);
+  --neutral-400: hsl(0 0% 30%);
+  --neutral-500: hsl(0 0% 40%);
+  --neutral-600: hsl(0 0% 60%);
+  --neutral-700: hsl(0 0% 80%);
+  --neutral-800: hsl(0 0% 90%);
+  --neutral-900: hsl(0 0% 96%);
+  --neutral-1000: hsl(0 0% 100%);
 }
 
 :root {
