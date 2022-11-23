@@ -1,13 +1,6 @@
 @use '../tokens';
 @use '../base';
 
-
-:root { 
-  --unchecked: var(--dark);
-  --checked: var(--accent);
-  --checkmark: var(--light);
-}
-
 .radio {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -33,14 +26,14 @@
     left: 0;
     width: 24px;
     height: 24px;
-    border: 2px solid var(--unchecked);
+    border: 2px solid currentColor;
     border-radius: 24px;
    }   
   }
 
   &:checked + label::before {
     content: "";
-    border-color: var(--checked);
+    border-color: var(--clr-accent);
   }
     &:checked + label::after {
     content: "";
@@ -50,6 +43,6 @@
     width: 12px;
     height: 12px;
     border-radius: 8px;
-    background-color: var(--checked);
+    background-color: var(--clr-accent);
   }
 }

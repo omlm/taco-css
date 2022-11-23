@@ -1,5 +1,6 @@
 :root {
-  --neutral: 240:
+  --neutral: 240;
+  --neutral-10: hsl(var(--neutral) 3% 5%);
   --neutral-50: hsl(var(--neutral) 3% 11%);
   --neutral-100: hsl(var(--neutral) 2% 18%);
   --neutral-200: hsl(var(--neutral) 2% 23%);
@@ -11,7 +12,7 @@
   --neutral-800: hsl(var(--neutral) 6% 83%);
   --neutral-900: hsl(var(--neutral) 11% 91%);
   --neutral-1000: hsl(var(--neutral) 24% 96%);
-  --blue: 210:
+  --blue: 210;
   --blue-100: hsl(var(--blue) 100% 18%);
   --blue-200: hsl(var(--blue) 100% 23%);
   --blue-300: hsl(var(--blue) 100% 29%);
@@ -21,15 +22,39 @@
   --blue-700: hsl(var(--blue) 100% 79%);
   --blue-800: hsl(var(--blue) 100% 83%);
   --blue-900: hsl(var(--blue) 100% 91%);
+  --yellow: 50;
+  --yellow-100: hsl(var(--yellow) 100% 20%);
+  --yellow-200: hsl(var(--yellow) 100% 30%);
+  --yellow-300: hsl(var(--yellow) 100% 40%);
+  --yellow-400: hsl(var(--yellow) 100% 50%);
+  --yellow-500: hsl(var(--yellow) 100% 69%);
+  --yellow-600: hsl(var(--yellow) 100% 78%);
+  --yellow-700: hsl(var(--yellow) 100% 85%);
+  --yellow-800: hsl(var(--yellow) 100% 91%);
+  --yellow-900: hsl(var(--yellow) 100% 96%);
 }
 
 :root {
-  --red: red;
-  --green: green;
-  --dark: #242424;
-  --light: #eeeeee;
-  --accent: hsl(216 75% 45%);
-  --background: var(--neutral-500);
+  color-scheme: light;
+  --clr-accent: var(--blue-400);
+  --clr-primary: var(--neutral-100);
+  --clr-secondary: var(--neutral-200);
+  --clr-tertiary: var(--neutral-300);
+  --clr-accent: var(--blue-400);
+  --clr-on-color: var(--neutral-1000);
+  --clr--surface-primary: var(--neutral-1000);
+  --clr-surface-secondary: var(--neutral-900);
+  --clr-surface-focus: var(--blue-900);
+  --clr-canvas: var(--neutral-1000);
+  --clr-green: hsl(135 59% 49%);
+  --clr-white: var(--neutral-1000);
+}
+
+:root:has(#dark:checked) {
+  color-scheme: dark;
+  --clr-canvas: var(--neutral-50);
+  --clr-primary: var(--neutral-800);
+  --clr-accent: var(--yellow-400);
 }
 
 :root {
@@ -40,26 +65,29 @@
 }
 
 :root {
-  --font-base-size: 1rem;
-  --font-scale-ratio: 1.25;
-  --font-line-height: 1.75;
-  --font-line-height-heading: 1.2;
-  --font-family-heading: "Suisse", Sans-serif;
-  --font-family-body: "Suisse", Sans-serif;
-  --font-family-alt: "Suisse", Sans-serif;
-  --font-family-code: Monaco, Sans-serif;
-  --font-weight-light: 300;
-  --font-weight-standard: 400;
-  --font-weight-strong: 600;
-  --text-size-body-large: calc(var(--font-base-size)*var(--font-scale-ratio));
-  --text-size-body-standard: var(--font-base-size);
-  --text-size-body-small: calc(var(--font-base-size)*0.875);
-  --text-size-body-micro: calc(var(--font-base-size)*0.75);
-  --text-size-heading-1: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-2: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-3: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-4: calc(var(--font-base-size)*var(--font-scale-ratio));
-  --text-size-heading-5: calc(var(--font-base-size));
+  --font-primary: "SF Pro Text", Sans-serif;
+  --font-secondary: "Suisse", Sans-serif;
+  --font-mono: "Suisse", Sans-serif;
+  --font-base: 1rem;
+  --font-scale: var(--font-scale-prefect-fourth);
+  --font-scale-golden: 1.618;
+  --font-scale-major-third: 1.25;
+  --font-scale-prefect-fourth: 1.333;
+  --font-light: 300;
+  --font-standard: 400;
+  --font-strong: 600;
+  --font-lh-standard: 1.5;
+  --font-lh-tight: 1.2;
+  --font-lh-teset: 1;
+  --text-large: calc(var(--font-base)*var(--font-scale));
+  --text-standard: var(--font-base);
+  --text-small: calc(var(--font-base)*0.875);
+  --text-micro: calc(var(--font-base)*0.75);
+  --text-h1: calc(var(--font-base)*var(--font-scale)*var(--font-scale)*var(--font-scale)*var(--font-scale)*var(--font-scale));
+  --text-h2: calc(var(--font-base)*var(--font-scale)*var(--font-scale)*var(--font-scale));
+  --text-h3: calc(var(--font-base)*var(--font-scale)*var(--font-scale));
+  --text-h4: calc(var(--font-base)*var(--font-scale));
+  --text-h5: calc(var(--font-base)*0.825);
 }
 
 *, *::before, *::after {
@@ -97,11 +125,90 @@ p, h1, h2, h3, h4, h5, h6 {
   https://www.joshwcomeau.com/css/custom-css-reset/ 
 
   */
+body {
+  background-color: var(--clr-canvas);
+  color: var(--clr-primary);
+  font-size: var(--text-standard);
+  font-family: var(--font-primary);
+  line-height: var(--font-lh-standard);
+  padding: 2rem;
+  max-width: 768px;
+  margin-inline: auto;
+}
+
+fieldset {
+  margin: 2rem 0;
+}
+
+.lead {
+  font-size: var(--text-large);
+}
+
+.small {
+  font-size: var(--text-small);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--font-strong);
+  line-height: var(--font-lh-tight);
+  color: var(--clr-text-accent);
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+h4 {
+  font-size: var(--text-h4);
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) + :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 2rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) + :is(p) {
+  margin-top: 0.25rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.t-button-group {
+  display: flex;
+  gap: 2rem;
+}
+.t-button-group--end {
+  flex-direction: row-reverse;
+}
+
+.t-button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--on-color);
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.t-button--accent {
+  background-color: var(--accent);
+}
+
 .card {
   color: var(--light);
   padding: var(--small);
   margin-top: var(--large);
-  background-color: var(--background);
+  background-color: var(--clr-surface-focus);
 }
 
 .accordion {
@@ -110,9 +217,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --unchecked: var(--dark);
-  --checked: var(--accent);
-  --checkmark: var(--light);
+  --checkmark: var(--clr-canvas);
 }
 
 fieldset {
@@ -148,13 +253,13 @@ fieldset {
   left: 0;
   width: 24px;
   height: 24px;
-  border: 2px solid var(--unchecked);
+  border: 2px solid currentColor;
   border-radius: 3px;
 }
 .checkbox:checked + label::before {
   content: "";
-  background-color: var(--checked);
-  border-color: var(--checked);
+  background-color: var(--clr-accent);
+  border-color: var(--clr-accent);
 }
 .checkbox:checked + label::after {
   content: "";
@@ -166,12 +271,6 @@ fieldset {
   border-bottom: 3px solid var(--checkmark);
   border-right: 3px solid var(--checkmark);
   transform: rotate(45deg);
-}
-
-:root {
-  --unchecked: var(--dark);
-  --checked: var(--accent);
-  --checkmark: var(--light);
 }
 
 .radio {
@@ -199,12 +298,12 @@ fieldset {
   left: 0;
   width: 24px;
   height: 24px;
-  border: 2px solid var(--unchecked);
+  border: 2px solid currentColor;
   border-radius: 24px;
 }
 .radio:checked + label::before {
   content: "";
-  border-color: var(--checked);
+  border-color: var(--clr-accent);
 }
 .radio:checked + label::after {
   content: "";
@@ -214,7 +313,7 @@ fieldset {
   width: 12px;
   height: 12px;
   border-radius: 8px;
-  background-color: var(--checked);
+  background-color: var(--clr-accent);
 }
 
 .toggle-switch {
@@ -239,7 +338,7 @@ fieldset {
   right: 0;
   width: 42px;
   height: 100%;
-  background-color: var(--dark);
+  background-color: var(--neutral-700);
   border-radius: 100px;
 }
 .toggle-switch + label:after {
@@ -249,11 +348,11 @@ fieldset {
   right: 20px;
   width: 20px;
   height: 20px;
-  background-color: var(--light);
-  border-radius: 48px;
+  background-color: var(--clr-white);
+  border-radius: 50%;
 }
 .toggle-switch:checked + label:before {
-  background-color: var(--accent);
+  background-color: var(--clr-green);
 }
 .toggle-switch:checked + label:after {
   right: 2px;

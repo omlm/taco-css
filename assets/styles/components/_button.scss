@@ -1,0 +1,31 @@
+@use '../tokens';
+@use '../base';
+
+
+.t-button-group {
+  display: flex;
+  gap: 2rem;
+
+  &--end {
+    flex-direction: row-reverse;
+  }
+
+}
+
+.t-button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1.5rem;
+
+  color: var(--on-color);
+  background-color: var(--primary);
+
+  border: 1px solid transparent;
+
+  border-radius: 3px;
+
+  &--accent {
+    background-color: var(--accent);
+  }
+}
