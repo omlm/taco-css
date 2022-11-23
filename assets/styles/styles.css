@@ -1,19 +1,35 @@
 :root {
+  --neutral: 240:
+  --neutral-50: hsl(var(--neutral) 3% 11%);
+  --neutral-100: hsl(var(--neutral) 2% 18%);
+  --neutral-200: hsl(var(--neutral) 2% 23%);
+  --neutral-300: hsl(var(--neutral) 1% 29%);
+  --neutral-400: hsl(var(--neutral) 1% 39%);
+  --neutral-500: hsl(var(--neutral) 2% 57%);
+  --neutral-600: hsl(var(--neutral) 3% 69%);
+  --neutral-700: hsl(var(--neutral) 5% 79%);
+  --neutral-800: hsl(var(--neutral) 6% 83%);
+  --neutral-900: hsl(var(--neutral) 11% 91%);
+  --neutral-1000: hsl(var(--neutral) 24% 96%);
+  --blue: 210:
+  --blue-100: hsl(var(--blue) 100% 18%);
+  --blue-200: hsl(var(--blue) 100% 23%);
+  --blue-300: hsl(var(--blue) 100% 29%);
+  --blue-400: hsl(var(--blue) 100% 39%);
+  --blue-500: hsl(var(--blue) 100% 57%);
+  --blue-600: hsl(var(--blue) 100% 69%);
+  --blue-700: hsl(var(--blue) 100% 79%);
+  --blue-800: hsl(var(--blue) 100% 83%);
+  --blue-900: hsl(var(--blue) 100% 91%);
+}
+
+:root {
   --red: red;
   --green: green;
   --dark: #242424;
   --light: #eeeeee;
   --accent: hsl(216 75% 45%);
-  --neutral-100: hsl(0 0% 0%);
-  --neutral-200: hsl(0 0% 8%);
-  --neutral-300: hsl(0 0% 16%);
-  --neutral-400: hsl(0 0% 30%);
-  --neutral-500: hsl(0 0% 40%);
-  --neutral-600: hsl(0 0% 60%);
-  --neutral-700: hsl(0 0% 80%);
-  --neutral-800: hsl(0 0% 90%);
-  --neutral-900: hsl(0 0% 96%);
-  --neutral-1000: hsl(0 0% 100%);
+  --background: var(--neutral-500);
 }
 
 :root {
@@ -85,6 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--light);
   padding: var(--small);
   margin-top: var(--large);
+  background-color: var(--background);
 }
 
 .accordion {
