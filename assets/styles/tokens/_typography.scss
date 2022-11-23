@@ -1,28 +1,31 @@
 :root {
+  --font-primary: "SF Pro Text", Sans-serif;
+  --font-secondary: "Suisse", Sans-serif;
+  --font-mono: "Suisse", Sans-serif;
 
-  --font-base-size: 1rem;
-  --font-scale-ratio: 1.25;
+  --font-base: 1rem;
+  --font-scale: var(--font-scale-prefect-fourth);
 
-  --font-line-height: 1.75;
-  --font-line-height-heading: 1.2;
+  --font-scale-golden: 1.618;
+  --font-scale-major-third: 1.25;
+  --font-scale-prefect-fourth: 1.333;
 
-  --font-family-heading: "Suisse", Sans-serif;
-  --font-family-body: "Suisse", Sans-serif;
-  --font-family-alt: "Suisse", Sans-serif;
-  --font-family-code: Monaco, Sans-serif;
-  --font-weight-light: 300;
-  --font-weight-standard: 400;
-  --font-weight-strong: 600;
+  --font-light: 300;
+  --font-standard: 400;
+  --font-strong: 600;
+
+  --font-lh-standard: 1.5;
+  --font-lh-tight: 1.2;
+  --font-lh-teset: 1;
+
+  --text-large: calc(var(--font-base)*var(--font-scale));
+  --text-standard: var(--font-base);
+  --text-small: calc(var(--font-base)*0.875);
+  --text-micro: calc(var(--font-base)*0.75);
   
-  --text-size-body-large: calc(var(--font-base-size)*var(--font-scale-ratio));
-  --text-size-body-standard: var(--font-base-size);
-  --text-size-body-small: calc(var(--font-base-size)*0.875);
-  --text-size-body-micro: calc(var(--font-base-size)*0.75);
-  
-  --text-size-heading-1: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-2: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-3: calc(var(--font-base-size)*var(--font-scale-ratio)*var(--font-scale-ratio));
-  --text-size-heading-4: calc(var(--font-base-size)*var(--font-scale-ratio));
-  --text-size-heading-5: calc(var(--font-base-size));
-
+  --text-h1: calc(var(--font-base)*var(--font-scale)*var(--font-scale)*var(--font-scale)*var(--font-scale)*var(--font-scale));
+  --text-h2: calc(var(--font-base)*var(--font-scale)*var(--font-scale)*var(--font-scale));
+  --text-h3: calc(var(--font-base)*var(--font-scale)*var(--font-scale));
+  --text-h4: calc(var(--font-base)*var(--font-scale));
+  --text-h5: calc(var(--font-base)*0.825);
 } 

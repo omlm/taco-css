@@ -7,9 +7,34 @@
     <title>Taco</title>
     <meta name="description" content="Taco css" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script href="assets/js/script.js"></script>
+    <meta name="color-scheme" content="dark light" />
   </head>
   <body>
     <h1>Hello World!</h1>
+    <section>
+      <h2>Hello World!</h2>
+      <p class="lead">
+        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu
+        leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+      </p>
+      <h3>Iub Cwergnm</h3>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Morbi
+        leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor
+        id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et
+        magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus
+        eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet,
+        consectetur.
+      </p>
+      <h4>Adipiscing elit</h4>
+      <p class="small">
+        Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies
+        vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id
+        elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </section>
     <fieldset>
       <div class="form-item">
         <input class="checkbox" type="checkbox" name="check-1" id="check-1" />
@@ -22,12 +47,12 @@
     </fieldset>
     <fieldset>
       <div class="form-item">
-        <input class="radio" type="radio" name="radio" id="radio-1" />
-        <label for="radio-1">Yes</label>
+        <input class="radio" type="radio" name="scheme" id="light" />
+        <label for="light">Light</label>
       </div>
       <div class="form-item">
-        <input class="radio" type="radio" name="radio" id="radio-2" />
-        <label for="radio-2">No</label>
+        <input class="radio" type="radio" name="scheme" id="dark" checked />
+        <label for="dark">Dark</label>
       </div>
     </fieldset>
     <div class="form item">
@@ -37,6 +62,11 @@
 
     <div class="card">
       <h3>tester</h3>
+    </div>
+
+    <div class="t-button-group t-button-group--end">
+      <button class="t-button">Button</button>
+      <button class="t-button t-button--accent">Button</button>
     </div>
   </body>
 </html>

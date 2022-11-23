@@ -2,14 +2,36 @@
 
 :root {
 
-    --red: red;
-    --green: green;
-    --dark: #242424;
-    --light: #eeeeee;
-    --accent: hsl(216 75% 45%);
+color-scheme: light;
 
-    --background: var(--neutral-500);
+    --clr-accent: var(--blue-400);
+
+    --clr-primary: var(--neutral-100);
+    --clr-secondary: var(--neutral-200);
+    --clr-tertiary: var(--neutral-300);
+    --clr-accent: var(--blue-400);
+    --clr-on-color: var(--neutral-1000);
+
+    --clr--surface-primary: var(--neutral-1000);
+    --clr-surface-secondary: var(--neutral-900);
+    --clr-surface-focus: var(--blue-900);
+    --clr-canvas: var(--neutral-1000);
 
 
+    --clr-green: hsl(135 59% 49%);
+    --clr-white: var(--neutral-1000);
 
 } 
+
+:root:has(#dark:checked) {
+  color-scheme: dark;
+
+    --clr-canvas: var(--neutral-50);
+    --clr-primary: var(--neutral-800);
+    --clr-accent: var(--yellow-400);
+
+    
+}
+
+
+
